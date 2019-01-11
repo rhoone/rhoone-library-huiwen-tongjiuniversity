@@ -1,0 +1,30 @@
+{
+    "name": "rhoone/rhoone-library-huiwen-tongjiuniversity",
+    "description": "Tongji University Library for rho one.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","rho","one","search","library", "tongji", "university"],
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "rhoone",
+            "email": "opensource@dev.rho.one"
+        }
+    ],
+    "require": {
+        "rhoone/yii2-rhoone": "dev-master",
+        "rhoone/rhoone-spider": "dev-master",
+        "rhoone/rhoone-library": "dev-master",
+        "rhoone/rhoone-library-huiwen": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "rhoone\\library\\provider\\huiwen\\target\\tongjiuniversity\\": ""
+        }
+    },
+    "repositories":[
+        {
+            "type": "git",
+            "url": "https://github.com/rhoone/rhoone-library-huiwen-tongjiuniversity"
+        }
+    ]
+}
