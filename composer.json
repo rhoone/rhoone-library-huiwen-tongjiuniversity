@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "rhoone\\library\\provider\\huiwen\\target\\tongjiuniversity\\": ""
+            "rhoone\\library\\providers\\huiwen\\targets\\tongjiuniversity\\": ""
         }
     },
     "repositories":[
