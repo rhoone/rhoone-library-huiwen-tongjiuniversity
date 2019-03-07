@@ -13,6 +13,11 @@
 namespace rhoone\library\providers\huiwen\targets\tongjiuniversity\job;
 
 use \rhoone\library\providers\huiwen\job\BatchDownloadToMongoDBJob as baseJob;
+use rhoone\library\providers\huiwen\targets\tongjiuniversity\destinations\mongodb\Destination;
+use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\DownloadedContent;
+use rhoone\library\providers\huiwen\targets\tongjiuniversity\targets\MarcTarget;
+use rhoone\library\targets\Target;
+use yii\di\Instance;
 
 /**
  * Class BatchDownloadToMongoDBJob
@@ -20,5 +25,37 @@ use \rhoone\library\providers\huiwen\job\BatchDownloadToMongoDBJob as baseJob;
  */
 class BatchDownloadToMongoDBJob extends baseJob
 {
+    /**
+     * @var string
+     */
+    public $destinationClass = Destination::class;
 
+    /**
+     * @var string
+     */
+    public $modelClass = DownloadedContent::class;
+
+    /**
+     * @var Target
+     */
+    public $target = MarcTarget::class;
+
+    /**
+     * @throws \yii\base\InvalidConfigException
+     */
+    protected function prepareTarget()
+    {
+        $this->target = Instance::ensure($this->target, Target::class);
+        $this->urlTemplate = $this->target->getAbsoluteUrl(['marc_no' => '{%marc_no}']);
+        $this->keyAttribute = 'marc_no';
+    }
+
+    /**
+     *
+     */
+    public function init()
+    {
+        $this->prepareTarget();
+        parent::init();
+    }
 }
