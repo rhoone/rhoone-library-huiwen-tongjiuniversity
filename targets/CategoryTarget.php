@@ -21,5 +21,13 @@ use rhoone\library\providers\huiwen\targets\CategoryTarget as baseCategoryTarget
  */
 class CategoryTarget extends baseCategoryTarget
 {
+    /**
+     * @var string
+     */
+    public $host = "webpac.lib.tongji.edu.cn";
+
+    /**
+     * @var string
+     */
     public $relativeUrl = "/browse/cls_browsing.php";
 }

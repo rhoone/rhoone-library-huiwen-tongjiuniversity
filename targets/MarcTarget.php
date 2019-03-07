@@ -21,5 +21,13 @@ use rhoone\library\providers\huiwen\targets\MarcTarget as baseMarcTarget;
  */
 class MarcTarget extends baseMarcTarget
 {
+    /**
+     * @var string
+     */
+    public $host = "webpac.lib.tongji.edu.cn";
+
+    /**
+     * @var string
+     */
     public $relativeUrl = "/opac/item.php";
 }
