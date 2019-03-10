@@ -33,7 +33,7 @@ class BatchDownloadToMongoDBJob extends baseJob
     /**
      * @var string
      */
-    public $modelClass = DownloadedContent::class;
+    public $downloadedContentClass = DownloadedContent::class;
 
     /**
      * @var Target
