@@ -34,7 +34,7 @@ db.marc_copy.createIndex({"marc_no": 1, "call_no": 1, "barcode": 1}, {name: "mar
 db.marc_copy.createIndex({"call_no": 1}, {name: "call_no_asc"});
 db.marc_copy.createIndex({"barcode": 1}, {name: "barcode_asc"});
 db.marc_copy.createIndex({"volume_period": 1}, {name: "volume_period_asc"});
-db.marc_copy.createIndex({"position": 1}, {name, "position_asc"});
+db.marc_copy.createIndex({"position": 1}, {name: "position_asc"});
 db.marc_copy.createIndex({"status": 1}, {name: "status_asc"});
 db.marc_copy.createIndex({"created_at": 1}, {name: "created_at_asc"});
 db.marc_copy.createIndex({"updated_at": 1}, {name: "updated_at_asc"});
