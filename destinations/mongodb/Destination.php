@@ -16,7 +16,7 @@ use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\Down
 
 /**
  * Class Destination
- * @property DownloadedContent $model
+ * @property DownloadedContent $downloadedContent
  * @package rhoone\library\providers\huiwen\targets\tongjiuniversity\destinations\mongodb
  */
 class Destination extends \rhoone\spider\destinations\mongodb\Destination
@@ -24,7 +24,7 @@ class Destination extends \rhoone\spider\destinations\mongodb\Destination
     /**
      * @var string the class of destination model implemented the `setDownloadedContent()` method.
      */
-    public $modelClass = DownloadedContent::class;
+    public $downloadedContentClass = DownloadedContent::class;
 
     /**
      * Export content to specified mongodb.
@@ -33,15 +33,15 @@ class Destination extends \rhoone\spider\destinations\mongodb\Destination
      */
     public function export(string $content)
     {
-        $this->model->setDownloadedContent($content);
+        $this->downloadedContent->setDownloadedContent($content);
         try {
-            $result = $this->model->save();
+            $result = $this->downloadedContent->save();
         } catch (\Exception $ex) {
             print_r($ex->getMessage());
         }
-        if ($this->model->hasErrors()) {
-            $this->model->getErrorSummary(true);
+        if ($this->downloadedContent->hasErrors()) {
+            $this->downloadedContent->getErrorSummary(true);
         }
-        return $this->model->save();
+        return $this->downloadedContent->save();
     }
 }
