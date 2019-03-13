@@ -12,23 +12,23 @@
 
 namespace rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb;
 
-use rhoone\library\providers\huiwen\models\mongodb\MarcCopy as huiwenMarcCopy;
+use rhoone\library\providers\huiwen\models\mongodb\MarcStatus as huiwenMarcStatus;
 
 /**
- * Class MarcCopy
+ * Class MarcStatus
  * @package rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb
  */
-class MarcCopy extends huiwenMarcCopy
+class MarcStatus extends huiwenMarcStatus
 {
     /**
      * @var string
      */
     public $marcNoClass = MarcNo::class;
     /**
-     * @return string[]
+     * {@inheritdoc}
      */
     public static function collectionName()
     {
-        return ['tongjiuniversity', 'marc_copy'];
+        return ['tongjiuniversity', 'marc_status'];
     }
 }

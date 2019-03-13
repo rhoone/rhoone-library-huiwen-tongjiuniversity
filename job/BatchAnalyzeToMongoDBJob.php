@@ -14,6 +14,7 @@ namespace rhoone\library\providers\huiwen\targets\tongjiuniversity\job;
 
 use console\modules\spider\target\library\TongjiUniversity\models\Marc;
 use rhoone\library\providers\huiwen\job\BatchAnalyzeToMongoDBJob as baseJob;
+use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\MarcStatus;
 use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\DownloadedContent;
 use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\MarcCopy;
 use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\MarcInfo;
@@ -44,4 +45,9 @@ class BatchAnalyzeToMongoDBJob extends baseJob
      * @var string
      */
     public $marcInfoClass = MarcInfo::class;
+
+    /**
+     * @var string
+     */
+    public $marcStatusClass = MarcStatus::class;
 }

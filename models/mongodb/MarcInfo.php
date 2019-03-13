@@ -21,6 +21,10 @@ use rhoone\library\providers\huiwen\models\mongodb\MarcInfo as huiwenMarcInfo;
 class MarcInfo extends huiwenMarcInfo
 {
     /**
+     * @var string
+     */
+    public $marcNoClass = MarcNo::class;
+    /**
      * @return array|string|void
      */
     public static function collectionName()
