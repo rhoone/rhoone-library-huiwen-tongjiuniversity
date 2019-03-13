@@ -38,3 +38,8 @@ db.marc_copy.createIndex({"position": 1}, {name: "position_asc"});
 db.marc_copy.createIndex({"status": 1}, {name: "status_asc"});
 db.marc_copy.createIndex({"created_at": 1}, {name: "created_at_asc"});
 db.marc_copy.createIndex({"updated_at": 1}, {name: "updated_at_asc"});
+
+db.marc_status.createIndex({"marc_no": 1}, {name: "marc_no_unique_asc", unique: true});
+db.marc_status.createIndex({"status": 1}, {name: "status_asc"});
+db.marc_status.createIndex({"type": 1}, {name: "type_asc"});
+db.marc_status.createIndex({"page_visit": 1}, {name: "page_visit_asc"});
