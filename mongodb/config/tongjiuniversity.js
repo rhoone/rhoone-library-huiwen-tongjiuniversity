@@ -24,6 +24,7 @@ db.marc_no.createIndex({"updated_at": 1}, {name: "updated_at_asc"});
 db.marc_info.createIndex({"marc_no": 1}, {name: "marc_no_asc"});
 db.marc_info.createIndex({"key": 1}, {name: "key_asc"});
 db.marc_info.createIndex({"value": "text"}, {name: "value_asc"});
+db.marc_info.createIndex({"marc_no": 1, "key": 1, "value": "text"}, {name: "marc_key_value_asc"});
 db.marc_info.createIndex({"created_at": 1}, {name: "created_at_asc"});
 db.marc_info.createIndex({"updated_at": 1}, {name: "updated_at_asc"});
 
@@ -41,3 +42,5 @@ db.marc_status.createIndex({"marc_no": 1}, {name: "marc_no_unique_asc", unique: 
 db.marc_status.createIndex({"status": 1}, {name: "status_asc"});
 db.marc_status.createIndex({"type": 1}, {name: "type_asc"});
 db.marc_status.createIndex({"page_visit": 1}, {name: "page_visit_asc"});
+db.marc_status.createIndex({"created_at": 1}, {name: "created_at_asc"});
+db.marc_status.createIndex({"updated_at": 1}, {name: "updated_at_asc"});
