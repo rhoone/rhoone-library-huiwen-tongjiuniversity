@@ -17,7 +17,7 @@ use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\Marc
 use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\MarcInfo;
 use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\MarcNo;
 use rhoone\library\providers\huiwen\targets\tongjiuniversity\models\mongodb\MarcStatus;
-use rhoone\spider\job\BatchIndexJob as baseIndexJob;
+use rhoone\library\providers\huiwen\job\BatchIndexToElasticSearchJob as baseIndexJob;
 
 /**
  * Class BatchIndexToElasticSearchJob
@@ -25,8 +25,6 @@ use rhoone\spider\job\BatchIndexJob as baseIndexJob;
  */
 class BatchIndexToElasticSearchJob extends baseIndexJob
 {
-    use IndexJobTrait;
-
     /**
      * @var string
      */
