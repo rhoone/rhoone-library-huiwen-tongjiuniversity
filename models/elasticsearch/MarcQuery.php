@@ -12,28 +12,21 @@
 
 namespace rhoone\library\providers\huiwen\targets\tongjiuniversity\models\elasticsearch;
 
-use rhoone\library\providers\huiwen\models\elasticsearch\Marc as huiwenMarc;
-
 /**
- * Class Marc
+ * Class MarcQuery
  * @package rhoone\library\providers\huiwen\targets\tongjiuniversity\models\elasticsearch
  */
-class Marc extends huiwenMarc
+class MarcQuery extends \rhoone\library\providers\huiwen\models\elasticsearch\MarcQuery
 {
-
     /**
-     * @return string
+     * @param $marc_no
+     * @return \rhoone\library\providers\huiwen\models\elasticsearch\MarcQuery
      */
-    public static function index()
+    public function marcNo($marc_no)
     {
-        return 'tongjiuniversity';
-    }
-
-    /**
-     * @return string|MarcQuery
-     */
-    public static function find()
-    {
-        return \Yii::createObject(MarcQuery::class, [get_called_class()]);
+        if (is_int($marc_no)) {
+            $marc_no = sprintf("%010s", (string) $marc_no);
+        }
+        return parent::marcNo($marc_no);
     }
 }
