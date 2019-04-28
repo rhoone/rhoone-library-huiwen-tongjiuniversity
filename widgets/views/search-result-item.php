@@ -26,12 +26,12 @@ $bundle = \common\assets\CommonAsset::register($this);
         <span class="pull-left"><a href="#"><img class="img-rounded" src="<?= $bundle->baseUrl ?>/img/book.jpg" alt="#" style="width: 50px; height: 50px"></a></span>
         <div class="media-body">
             <h4 class="media-heading">
-                <a href="<?= $baseUrl . $item->marc_no ?>" target="_blank"><b><?= $item->titles[0]['value'] ?></b></a>
+                <a href="<?= $baseUrl . $item->marc_no ?>" target="_blank"><?= $item->titles[0]['value'] ?></a>
                 <?php if (!empty($item->authors)): ?>
                     <small><?php
                         $authors = "";
                         foreach ($item->authors as $author) {
-                            $authors .= $author['author'] . ' ' . $author['duty'] . ';';
+                            $authors .= $author['author'] . ' ' . $author['duty'] . '; ';
                         }
                         echo $authors;
                         ?></small>
@@ -41,7 +41,7 @@ $bundle = \common\assets\CommonAsset::register($this);
                 <h5><?php
                     $presses = "";
                     foreach ($item->presses as $press) {
-                        $presses .= $press['location'] . ':' . $press['press'] . ',' . $press['date'] . ';';
+                        $presses .= $press['location'] . ':' . $press['press'] . ',' . $press['date'] . '; ';
                     }
                     echo $presses;
                     ?></h5>
@@ -50,7 +50,7 @@ $bundle = \common\assets\CommonAsset::register($this);
                 <h5><?php
                     $ISBNs = "";
                     foreach ($item->ISBNs as $ISBN) {
-                        $ISBNs .= $ISBN['value'] . ';';
+                        $ISBNs .= $ISBN['key'] . ":" . $ISBN['value'] . '; ';
                     }
                     echo $ISBNs;
                     ?></h5>
