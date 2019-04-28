@@ -47,6 +47,6 @@ echo LinkPager::widget([
 ?>
 <div class="alert alert-warning alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="关闭"><span aria-hidden="true">&times;</span></button>
-    <strong>注意！</strong> 检索内容基于<a href="http://webpac.lib.tongji.edu.cn">同济大学图书馆</a>2018年12月10日的数据。因此，图书的“借阅状态”仅供参考；在此之后新入藏的书籍可能无法被检索到。
+    <strong>注意！</strong> 检索内容基于<a href="http://webpac.lib.tongji.edu.cn">同济大学图书馆</a>2019年4月4日的数据。因此，图书的“借阅状态”仅供参考；在此之后新入藏的书籍可能无法被检索到。
 </div>
 
