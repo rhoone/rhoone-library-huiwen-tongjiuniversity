@@ -22,21 +22,10 @@ class Library extends \rhoone\library\providers\huiwen\Library
 {
     public $queryBuilderClass = QueryBuilder::class;
 
+    public $marcClass = Marc::class;
+
     public static function getId()
     {
         return "tongjiuniversity-library";
-    }
-
-    public function search($keywords, array $config = null)
-    {
-        //$queryArray = $this->buildQueryArray($keywords);
-        $config['keywords'] = $keywords;
-        $queryBuilder = new $this->queryBuilderClass($config);
-        /* @var $queryBuilder QueryBuilder */
-        $query = Marc::find()->query($queryBuilder->queryArray)->explain(false)->options($queryBuilder->queryOptions);
-        $provider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
-        return $provider;
     }
 }
