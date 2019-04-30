@@ -12,15 +12,17 @@
 
 namespace rhoone\library\providers\huiwen\targets\tongjiuniversity\models\elasticsearch;
 
+use rhoone\library\providers\huiwen\models\elasticsearch\MarcQuery as huiwenMarcQuery;
+
 /**
  * Class MarcQuery
  * @package rhoone\library\providers\huiwen\targets\tongjiuniversity\models\elasticsearch
  */
-class MarcQuery extends \rhoone\library\providers\huiwen\models\elasticsearch\MarcQuery
+class MarcQuery extends huiwenMarcQuery
 {
     /**
      * @param $marc_no
-     * @return \rhoone\library\providers\huiwen\models\elasticsearch\MarcQuery
+     * @return huiwenMarcQuery
      */
     public function marcNo($marc_no)
     {
