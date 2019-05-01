@@ -72,11 +72,11 @@ $bundle = \common\assets\CommonAsset::register($this);
                             <div class="media">
                                 <div class="content comment_edit_content">
                                     <div class="comment-message row">
-                                        <div class="col-md-2 col-sm-3 col-xs-6"><?= $book['call_no'] ?></div>
-                                        <div class="col-md-2 col-sm-3 col-xs-6"><?= $book['barcode'] ?></div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12"><?= $book['position'] ?></div>
-                                        <div class="col-md-2 col-sm-6 col-xs-6"><?= $book['volume_period'] ?></div>
-                                        <div class="col-md-2 col-sm-6 col-xs-6"
+                                        <div class="col-md-2 col-sm-6 col-xs-12"><?= $book['call_no'] ?></div>
+                                        <div class="col-md-2 col-sm-6 col-xs-12"><?= $book['barcode'] ?></div>
+                                        <div class="col-md-4 col-sm-12 col-xs-12"><?= $book['position'] ?></div>
+                                        <div class="col-md-2 col-sm-6 col-xs-12"><?= $book['volume_period'] ?></div>
+                                        <div class="col-md-2 col-sm-6 col-xs-12"
                                             <?php if ($book['status'] == '可借'): ?>
                                                 style="color: green"
                                             <?php endif; ?>
