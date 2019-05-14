@@ -13,7 +13,7 @@
 
 
 /* @var \rhoone\library\providers\huiwen\targets\tongjiuniversity\models\elasticsearch\Marc $item */
-$baseUrl = 'http://webpac.lib.tongji.edu.cn/opac/item.php?marc_no=';
+/* @var string $baseUrl */
 $bundle = \rhoone\library\providers\huiwen\widgets\assets\SearchResultsAsset::register($this);
 ?>
 
@@ -23,7 +23,7 @@ $bundle = \rhoone\library\providers\huiwen\widgets\assets\SearchResultsAsset::re
             <a class="btn btn-primary btn-sm followButton" href="<?= $baseUrl . $item->marc_no ?>" target="_blank">前往</a>
         </div>
 
-        <span class="pull-left"><a href="#"><img class="img-rounded" src="<?= $bundle->baseUrl ?>/img/book.jpg" alt="#" style="width: 50px;"></a></span>
+        <span class="pull-left"><a href="#"><img class="img-rounded" src="<?= $bundle->baseUrl . $bundle->bookImgPath ?>" alt="#" style="width: 50px;"></a></span>
         <div class="media-body">
             <h4 class="media-heading">
                 <a href="<?= $baseUrl . $item->marc_no ?>" target="_blank"><?= $item->titles[0]['value'] ?></a>

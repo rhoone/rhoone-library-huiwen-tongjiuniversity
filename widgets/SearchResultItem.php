@@ -26,10 +26,16 @@ class SearchResultItem extends Widget
      */
     public $item;
 
+    /**
+     * @var string
+     */
+    public $destinationBaseUrl = 'http://webpac.lib.tongji.edu.cn/opac/item.php?marc_no=';
+
     public function run()
     {
         return $this->render('search-result-item', [
             'item' => $this->item,
+            'baseUrl' => $this->destinationBaseUrl,
         ]);
     }
 }
