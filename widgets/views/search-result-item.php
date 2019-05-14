@@ -14,7 +14,7 @@
 
 /* @var \rhoone\library\providers\huiwen\targets\tongjiuniversity\models\elasticsearch\Marc $item */
 $baseUrl = 'http://webpac.lib.tongji.edu.cn/opac/item.php?marc_no=';
-$bundle = \common\assets\CommonAsset::register($this);
+$bundle = \rhoone\library\providers\huiwen\widgets\assets\SearchResultsAsset::register($this);
 ?>
 
 <li>
